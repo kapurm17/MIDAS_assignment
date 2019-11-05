@@ -6,6 +6,11 @@ import numpy as np
 
 def get_info(wav_file):
     '''
+	Args:
+	wav_file path
+
+	Returns:
+	Get the frame rate and sound_info array. 
 
     '''
     wav = wave.open(wav_file, 'r')
@@ -17,10 +22,16 @@ def get_info(wav_file):
 
 def get_spec(wav_file, save_path):
     '''
+	Plots the spectrogram and saves it.
+	Args:
+	wav_file: audio file path
+	save_path: path at which the spectroram has to be saved
 
+	Returns:
+	None
     '''
     sound_info, frame_rate = get_info(wav_file)
-    plt.figure(num = None, figsize= (6,6))
+    plt.figure(num = None, figsize= (3,3))
     plt.specgram(sound_info, Fs=frame_rate)
     plt.savefig(save_path)
     plt.close()
@@ -28,7 +39,7 @@ def get_spec(wav_file, save_path):
 
 def a_to_i(folder_path):
     '''
-
+	Main Audio to Image conversion
     '''
     os.chdir(folder_path)
     folders = os.listdir()
