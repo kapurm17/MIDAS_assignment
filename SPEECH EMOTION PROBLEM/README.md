@@ -7,4 +7,4 @@ This problem had two parts:
 The get_spect.py file is used to get the spectrogram of the .wav file. <br>
 The main.py is the script for implementation of the model on the Test data. <br>
 The jupyter notebook contains the model details. <br>
-the model has been saved along with the weights.
+The weights have been saved.
