@@ -52,6 +52,8 @@ def a_to_i(folder_path):
                 pass
             else:
                 wav_file=os.path.join(path, f)
-                get_spec(wav_file, save_path= os.path.join(path, 'imgs', f[:-4]+ 'jpg'))
+		save_path= os.path.join(path, 'imgs')
+		os.mkdir(save_path)
+                get_spec(wav_file, os.path.join(save_path, f[:-4]+ 'jpg'))
                 print(os.path.join(path, folder, f))
     return None
